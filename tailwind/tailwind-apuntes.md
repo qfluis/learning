@@ -62,12 +62,52 @@ En html:
 <p class="bg-mi-color"> Color personalizado en tailwind.config.js</p>
 ...
 ```
+### Opacidad color
+bg-lime-500/25
+### Gradientes
+https://tailwindcss.com/docs/gradient-color-stops
+- Se especifica tipo de gradiente:
+    - **bg-gradient-to-r**, de izquierda a derecha
+    - **bg-gradient-to-l**, de derecha a izquierda
+    - **bg-gradient-to-tr**, de abajo izquierda a arriba derecha.
+    ...
+- Se indica el color from **from-red-600**
+- Se pueden indicar colores intermedios **via-blue-400**
+- Se indica el color to **to-black**, si no se indica es a transparente.
+- Se pueden indicar también las posiciones de los colores.
+
+```
+<p class="bg-gradient-to-r from-mi-color from-25% via-blue-300 via-70% to-black to-75%">Gradiente con posiciones</p>
+```
+#### En Background
+
+#### En texto
+
+
 ## Margins, paddings, borders
-### Padding
+### Padding, margin
 ![](./app/imgs/padding.png)
 Se pueden utilizar las siguientes clases:
-- **p-5**: padding general.
-- **pt-1, pr-2, pb-8, pl-3** (top, right, bottom, left).
-- **px-8**: padding horizontal (left y right).
-- **py-5**: padding vertical (top y bottom).
+- **p-5, m-5**: padding/margin general.
+- **pt-1, mr-2, pb-8, ml-3** (top, right, bottom, left).
+- **px-8**: padding/margin horizontal (left y right).
+- **my-5**: padding/margin vertical (top y bottom).
+- **mx-auto**: para centrar por ejemplo.
 
+### Borders
+- Definir borde: **border-1**
+- Redondear: **rounded, rounded-md, rounded-xl**...
+- color: **border-red-500**
+### Outline
+- definir outline: **outline**
+- tamaño: **outline-2**
+- color: **outline-black**
+
+### Sizing
+- **w-24, w-96...**: tamaños predefinidos tailwind (ver documentación).
+
+## Pseudo clases hover, active...
+- **hover:bg-lime-500**, cambia la clase cuando se produce el hover.
+
+## Display
+- **block**: el elemento pasa a tener display block.
