@@ -79,9 +79,15 @@ https://tailwindcss.com/docs/gradient-color-stops
 ```
 <p class="bg-gradient-to-r from-mi-color from-25% via-blue-300 via-70% to-black to-75%">Gradiente con posiciones</p>
 ```
-#### En Background
-
-#### En texto
+### Gradientes en texto
+Esto se puede conseguir haciendo una "máscara" del texto con el background. Gracias a las clases **bg-clip-text** y **text-transparent**
+```
+<div>
+  <span class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+    Texto con máscara del background
+  </span>
+</div>
+```
 
 
 ## Margins, paddings, borders
@@ -104,10 +110,15 @@ Se pueden utilizar las siguientes clases:
 - color: **outline-black**
 
 ### Sizing
-- **w-24, w-96...**: tamaños predefinidos tailwind (ver documentación).
+- **w-24, w-96..., h-0, h-5**: tamaños para width y height predefinidos tailwind (ver documentación).
+- **w-[170px]**: tamaños en pixels.
+- **w-1/2**: tamaños proporcionales.
+- **h-screen**: tamaño pantalla.
+- **h-full**: tamaño del contenedor.
 
-## Pseudo clases hover, active...
+## Estados
 - **hover:bg-lime-500**, cambia la clase cuando se produce el hover.
 
 ## Display
 - **block**: el elemento pasa a tener display block.
+- **flex**
