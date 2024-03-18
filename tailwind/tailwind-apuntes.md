@@ -108,6 +108,10 @@ Se pueden utilizar las siguientes clases:
 - definir outline: **outline**
 - tamaño: **outline-2**
 - color: **outline-black**
+### ring
+Similar a outline pero hecho a partir de box-shadow, más personalizable.
+- definir ring y tamaño: **ring-1**
+- color: **ring-purple-600**
 
 ### Sizing
 - **w-24, w-96..., h-0, h-5**: tamaños para width y height predefinidos tailwind (ver documentación).
@@ -118,7 +122,24 @@ Se pueden utilizar las siguientes clases:
 
 ## Estados
 - **hover:bg-lime-500**, cambia la clase cuando se produce el hover.
+- **disabled:bg-red-200**, la clase se aplica si el input está disabled.
+- **focus:border-red-500**, la clase se aplica cuando el elemento tiene el foco.
+- **invalid:**, cuando el input no pasa validación.
+
+## Pseudoclases
+
+
 
 ## Display
 - **block**: el elemento pasa a tener display block.
 - **flex**
+
+## Otros
+### Cursor
+**cursor-pointer, cursor-wait, cursor-text**...
+### peer
+Para elementos hermanos
+```
+<input class="border border-gray-300 w-full px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-800 invalid:bg-red-600 peer" type="email" placeholder="Correo">
+<p class="text-red-600 hidden peer-invalid:block">El correo es incorrecto</p>
+```
