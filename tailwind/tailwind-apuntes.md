@@ -127,8 +127,12 @@ Similar a outline pero hecho a partir de box-shadow, más personalizable.
 - **invalid:**, cuando el input no pasa validación.
 
 ## Pseudoclases
-
-
+- **after:**
+```
+<button class="bg-orange-600 w-32 p-3 rounded-md relative after:content-[''] after:absolute after:left-32 after:top-4 after:border-8 after:border-transparent after:border-l-orange-600">CLICA</button>
+```
+- **placeholder:**
+- **file:**
 
 ## Display
 - **block**: el elemento pasa a tener display block.
