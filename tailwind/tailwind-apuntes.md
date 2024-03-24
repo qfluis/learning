@@ -131,14 +131,25 @@ Similar a outline pero hecho a partir de box-shadow, más personalizable.
 ```
 <button class="bg-orange-600 w-32 p-3 rounded-md relative after:content-[''] after:absolute after:left-32 after:top-4 after:border-8 after:border-transparent after:border-l-orange-600">CLICA</button>
 ```
-- **placeholder:**, para estilar el placeholder de los inputs.
+- **placeholder**, para estilar el placeholder de los inputs.
 ```
 <input class="border ml-2 px-2 placeholder:text-orange-300 placeholder:italic" type="text" placeholder="escribe aquí">
 ```
-- **file:**, para estilar inputs del tipo file.
+- **file**, para estilar inputs del tipo file.
 ```
 <input class="file:bg-violet-300 file:text-orange-700 hover:file:bg-violet-900 text-blue-700" type="file">
 ```
+- **marker**, para estilar las viñetas de las listas.
+```
+<ul class="list-disc ml-6 marker:text-red-700">
+...
+<ol class="list-decimal mt-4 ml-6 marker:text-red-700 marker:font-bold">
+```
+- **selection**, estila texto seleccionado de un párrafo.
+```
+<p class="m-2 mt-3 selection:bg-red-500 selection:text-white">Selecciona este texto</p>
+```
+
 
 ## Display
 - **block**: el elemento pasa a tener display block.
