@@ -127,12 +127,18 @@ Similar a outline pero hecho a partir de box-shadow, más personalizable.
 - **invalid:**, cuando el input no pasa validación.
 
 ## Pseudoclases
-- **after:**
+- **after, before**: añade después o antes un contenido.
 ```
 <button class="bg-orange-600 w-32 p-3 rounded-md relative after:content-[''] after:absolute after:left-32 after:top-4 after:border-8 after:border-transparent after:border-l-orange-600">CLICA</button>
 ```
-- **placeholder:**
-- **file:**
+- **placeholder:**, para estilar el placeholder de los inputs.
+```
+<input class="border ml-2 px-2 placeholder:text-orange-300 placeholder:italic" type="text" placeholder="escribe aquí">
+```
+- **file:**, para estilar inputs del tipo file.
+```
+<input class="file:bg-violet-300 file:text-orange-700 hover:file:bg-violet-900 text-blue-700" type="file">
+```
 
 ## Display
 - **block**: el elemento pasa a tener display block.
