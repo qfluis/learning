@@ -149,11 +149,19 @@ Similar a outline pero hecho a partir de box-shadow, más personalizable.
 ```
 <p class="m-2 mt-3 selection:bg-red-500 selection:text-white">Selecciona este texto</p>
 ```
-
+- **first-line, first-letter**
+```
+  <div class="first-letter:text-5xl first-letter:float-left first-letter:mr-2 first-line:uppercase first-line:font-bold">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit...
+  </div>
+```
 
 ## Display
 - **block**: el elemento pasa a tener display block.
 - **flex**
+
+## Breakpoints
+
 
 ## Otros
 ### Cursor
