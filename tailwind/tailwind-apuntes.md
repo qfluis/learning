@@ -161,7 +161,38 @@ Similar a outline pero hecho a partir de box-shadow, más personalizable.
 - **flex**
 
 ## Breakpoints
+Los breakpoints son los siguientes (configurable):
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- xl: 1280px
+- 2xl: 1536px
 
+**sm:bg-blue-500**, aplicaría cuando el viewport es >= 640px, por ejemplo.
+
+Si queremos definir breakpoints personalizados, debemos modificar en el ```tailwind.config.js```:
+```
+...
+    extend: {
+      colors: {
+        'mi-color': '#B17'
+      },
+      screens:{
+        'custom':'900px'
+      }
+    },
+...
+```
+Ejemplo uso breakpoints:
+```
+<div class="py-3 bg-red-300 sm:bg-blue-500 md:bg-green-400">
+  <div class="border-2 border-black p-6 w-80 lg:w-96 mx-auto">
+    <h2 class="text-xl sm:text-3xl custom:text-6xl  font-bold">Holiwi Responsive</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae, accusamus facere, architecto suscipit porro dignissimos ea voluptates provident possimus, numquam assumenda ipsum explicabo! Voluptates ut beatae placeat facere inventore.</p>
+  </div>
+</div>
+
+```
 
 ## Otros
 ### Cursor

@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         'mi-color': '#B17'
+      },
+      screens:{
+        'custom':'900px'
       }
     },
   },
