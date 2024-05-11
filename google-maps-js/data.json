@@ -1,0 +1,72 @@
+[
+    {
+        "title":"título 1",
+        "nombre":"nombre 1",
+        "dirección":"dirección 1",
+        "latitud": 41.1,
+        "longitud": 2.1
+    },
+    {
+        "title":"título 2",
+        "nombre":"nombre 2",
+        "dirección":"dirección 2",
+        "latitud": 42.2,
+        "longitud": 2.2
+    },
+    {
+        "title":"título 3",
+        "nombre":"nombre 3",
+        "dirección":"dirección 3",
+        "latitud": 43.3,
+        "longitud": 2.3
+    },
+    {
+        "title":"título 4",
+        "nombre":"nombre 4",
+        "dirección":"dirección 4",
+        "latitud": 44.4,
+        "longitud": 2.4
+    },
+    {
+        "title":"título 5",
+        "nombre":"nombre 5",
+        "dirección":"dirección 5",
+        "latitud": 45.5,
+        "longitud": 2.5
+    },
+    {
+        "title":"título 6",
+        "nombre":"nombre 6",
+        "dirección":"dirección 6",
+        "latitud": 46.6,
+        "longitud": 2.6
+    },
+    {
+        "title":"título 7",
+        "nombre":"nombre 7",
+        "dirección":"dirección 7",
+        "latitud": 47.7,
+        "longitud": 2.7
+    },
+    {
+        "title":"título 8",
+        "nombre":"nombre 8",
+        "dirección":"dirección 8",
+        "latitud": 48.8,
+        "longitud": 2.8
+    },
+    {
+        "title":"título 9",
+        "nombre":"nombre 9",
+        "dirección":"dirección 9",
+        "latitud": 49.9,
+        "longitud": 2.9
+    },
+    {
+        "title":"título 10",
+        "nombre":"nombre 10",
+        "dirección":"dirección 10",
+        "latitud": 50.10,
+        "longitud": 2.10
+    }
+]
