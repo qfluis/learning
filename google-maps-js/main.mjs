@@ -15,6 +15,11 @@ async function initMap() {
   // });
   // const pinElement = new PinElement();
 
+  // https://developers.google.com/maps/documentation/javascript/advanced-markers/html-markers?hl=es-419#maps_advanced_markers_html_simple-javascript
+  const pin = document.createElement("div");
+  pin.className = "marcador";
+  pin.textContent = "HOLI";
+
   
   map = new Map(document.getElementById("map"), {
     center: { lat: 41, lng: 2 },
@@ -27,10 +32,12 @@ async function initMap() {
   for (let item of data){
     let marker = new AdvancedMarkerElement({
       map: map,
-      // content: pinElement.element,
-      position: {lat:item.latitud, lng:item.longitud},
-      title:item.title
+      position: {lat:item.latitud, lng:item.longitud}//,
+      //content: pin
+      // title:item.title
     });
+
+    //marker.element.style.zIndex = 1;
 
     markers.push(marker);
 
@@ -53,8 +60,6 @@ async function initMap() {
   new markerClusterer.MarkerClusterer({ markers, map });
 
   centrarMapa();
-
-  console.log(markers);
 }
 
 async function getData(){
