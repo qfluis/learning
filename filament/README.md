@@ -41,3 +41,41 @@ php artisan make:model Firma -m
 composer require doctrine/dbal --dev
 php artisan make:filament-resource Firma --generate
 ```
+Para mostrar las firmas en la tabla, generamos una custom column
+```
+php artisan make:table-column signature
+
+// En el código de la vista blade:
+<div>
+    <img width="150px" src="{{ $getState() }}" alt="">
+</div>
+```
+#### Filament Google Maps
+Componente para mostrar Google Maps en filament.
+
+https://github.com/cheesegrits/filament-google-maps
+
+Para el ejemplo se ha creado modelo, migración y resource tabla clientes + seeder.
+Para ejecutar el Seeder:
+```
+php artisan db:seed --class=ClientesSeeder
+```
+
+Para instalar paquete (con filament 2 la versión 1 es la que funciona mejor):
+```
+composer require cheesegrits/filament-google-maps ^1.0
+```
+El siguiente comando te da el código que debes pegar en el modelo que contiene la información que quieres dibujar en el mapa (latitud, longitud)
+```
+php artisan filament-google-maps:model-code
+```
+
+En el .env deberemos incluir la API_KEY, podemos publicar configs por si nos interesa cambiar algo.
+```
+GOOGLE_MAPS_API_KEY=your_map_key_here
+php artisan vendor:publish --tag="filament-google-maps-config"
+```
+No acaba de adaptarse a necesidades... Investigar...
+
+
+

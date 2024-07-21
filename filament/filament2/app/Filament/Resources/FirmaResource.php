@@ -28,6 +28,7 @@ class FirmaResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required(),
                 SignaturePad::make('signature')
+                    ->hideDownloadButtons(true)
                     ->required(),
             ]);
     }
@@ -37,11 +38,15 @@ class FirmaResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\ImageColumn::make('signature'),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+                // Tables\Columns\ImageColumn::make('signature'),
+                // Tables\Columns\TextColumn::make('signature'),
+                Tables\Columns\ViewColumn::make('signature')
+                    ->view('tables.columns.signature')
+                    ->label('Signature'),
+                // Tables\Columns\TextColumn::make('created_at')
+                //     ->dateTime(),
+                // Tables\Columns\TextColumn::make('updated_at')
+                //     ->dateTime(),
             ])
             ->filters([
                 //

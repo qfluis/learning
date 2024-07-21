@@ -1,0 +1,1 @@
+Nombre: <b>{{ $nombre }}</b>
