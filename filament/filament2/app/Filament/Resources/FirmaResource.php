@@ -30,6 +30,19 @@ class FirmaResource extends Resource
                 SignaturePad::make('signature')
                     ->hideDownloadButtons(true)
                     ->required(),
+                Forms\Components\ViewField::make('qr')
+                    ->view('forms.components.qr')
+                    // ->default('eeeeiiii')
+                    ->dehydrated(false)
+                    ->reactive()
+                    ->afterStateUpdated(fn ($get, $set) => $set('qr_copy', $get('qr')))
+                    // ->afterStateUpdated(fn ($get, $set) => dump('updated'))
+                    ->label('QR Code'),
+                Forms\Components\TextInput::make('qr_copy')
+                    ->disabled()
+                    ->reactive()
+                    ->dehydrated(false)
+                    ->label('QR Code copy'),
             ]);
     }
 
@@ -46,7 +59,7 @@ class FirmaResource extends Resource
                 // Tables\Columns\TextColumn::make('created_at')
                 //     ->dateTime(),
                 // Tables\Columns\TextColumn::make('updated_at')
-                //     ->dateTime(),
+                //     ->dateTime(),                
             ])
             ->filters([
                 //

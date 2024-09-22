@@ -9,4 +9,5 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateFirma extends CreateRecord
 {
     protected static string $resource = FirmaResource::class;
+
 }

@@ -77,5 +77,8 @@ php artisan vendor:publish --tag="filament-google-maps-config"
 ```
 No acaba de adaptarse a necesidades... Investigar...
 
+### Custom View lector QR
+qr.blade.php
+Copiar en public libs: jsQR.js.
 
 
