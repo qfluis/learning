@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        const synth = window.speechSynthesis;        
+        
+        // utterThis.voice = 1;
+
+        
+
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = speak("listo");
+        }
+        function speak(text){
+            if (synth.speaking) {
+                console.error("speechSynthesis.speaking");
+                return;
+            }
+
+            const utterThis = new SpeechSynthesisUtterance(text);
+            const voces = synth.getVoices();
+            const vozEspanol = voces.find(v => v.lang.startsWith('es'));
+            
+
+            utterThis.onend = function (event) {
+            console.log("SpeechSynthesisUtterance.onend");
+            };
+            utterThis.onerror = function (event) {
+                console.error("SpeechSynthesisUtterance.onerror");
+            };
+
+
+            utterThis.pitch = 1;
+            utterThis.rate = 1;
+            synth.speak(utterThis);
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <button onClick="speak('OLA KE ASE')">OLA K ASE</button>
+    <button onClick="speak('holiwi')">holiwi</button>
+    <button onClick="speak('Col Lombarda BROTS-01CL0050')">producto</button>
+</body>
+</html>
