@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
+
+        if (!SpeechRecognition) {
+            alert("Tu navegador no soporta reconocimiento de voz.");
+        } else {
+            const reconocimiento = new SpeechRecognition();
+            reconocimiento.lang = "es-ES";
+            reconocimiento.continuous = true; // Detener después de una frase
+            reconocimiento.interimResults = false; // Solo resultados finales
+            reconocimiento.maxAlternatives = 1;
+
+            reconocimiento.onresult = (event) => {
+                const textLength = event.results.length;
+                const transcript = event.results[textLength-1][0].transcript.toLowerCase();
+
+                console.log(transcript);
+
+                if(transcript.includes("rojo")){
+                    alert("rojo");
+                }
+            };
+
+            reconocimiento.onerror = (event) => {
+                console.error("Error en el reconocimiento:", event.error);
+            };
+
+            window.iniciarReconocimiento = function () {
+                console.log("🎤 Iniciando reconocimiento...");
+                reconocimiento.start();
+            };
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Reconocimiento de voz (abre la consola)</h1>
+    <button onclick="iniciarReconocimiento()">Iniciar reconocimiento</button>
+</body>
+</html>
